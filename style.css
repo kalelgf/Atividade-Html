@@ -1,0 +1,62 @@
+body {        /* Este é um exemplo de seletor de elemento, ou seja, ele está estilizando meu body todo */
+    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif, Helvetica, sans-serif;      
+    margin: 0;
+    padding: auto;
+    background-color: azure;
+}
+
+header {     /* Este é um exemplo de seletor de elemento, ou seja, ele está estilizando meu header todo */
+    background-color: #333;
+    color: white;
+    padding: 15px; 
+    text-align: center;
+}
+
+nav ol {  /* estiliza a lista criada */
+    list-style: none;
+    padding: 0;
+}
+
+nav ol li {  /* estiliza cada item da minha lista */
+    display: inline;
+    margin: 0 15px;
+}
+
+nav a { /* estiliza os links da minha lista */
+    color: white;
+    text-decoration: none;
+}
+
+
+.container {            /* Este é um exemplo de seletor de classe, ou seja, ele está estilizando a classe que eu coloquei na minha div */
+    display: flex;
+    margin: 20px;
+}
+
+
+aside {
+    width: 25%;
+    padding: 20px;
+    background-color: #ddd;
+    text-align: center;
+}
+
+aside img {
+    width: 80%;
+    border-radius: 50%;
+}
+
+main {
+    flex: 1;
+    padding: 20px;
+    background: white;
+    border-radius: 5px;
+}
+
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+}
