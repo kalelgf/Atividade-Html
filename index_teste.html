@@ -1,0 +1,50 @@
+<!DOCTYPE html> <!--define o tipo de documento como html 5-->
+<html lang="pt-BR">
+<head> 
+    <meta charset="utf-8">       <!--como o texto vai ser codificado-->
+    <title>Meu Portifólio</title>         <!--Título que aparece na aba do navegador-->
+    <link rel="stylesheet" href="style.css">           <!--aqui ele chama meu arquivo css externo que vou criar-->
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon"> <!--aqui ele chama da minha pasta favicon o icone-->
+</head>
+<body>
+    <header>                                    <!--tag para cabeçalho da página(fica no topo da página)-->
+        <h1>Meu Portifólio</h1>                 <!--tag para definir o título do meu cabeçalho-->
+        <nav>                                   <!--tag usada para agrupar diferentes links de navegação-->
+            <ol>                                <!--cria a lista ordenada-->
+                <li> <a href="#sobre">Sobre Mim</a> </li>                       <!--tag "a" cria um hiper link em cima da palavra Sobre mim--> <!--esse link aponta para a section dentro do body que tem como atributo "id=sobre" -->
+                <li><a href="#interesses">Interesses</a></li>                   <!--esse #interesses nada mais é que um id criado que vou referenciar em uma section-->
+                <li><a href="#disciplinas">Disciplinas</a></li>
+                <li><a href="#projetos">Projetos</a></li>
+                <li><a href="html_dict.html">Dicionário HTML</a></li>
+            </ol>
+        </nav>
+    </header>                                                   <!--aqui eu fechei o cabeçalho com os hiperlinks da minha página-->
+         
+    <div class="container">                                     <!--div é uma tag generica usada apenas para agrupar os elementos dentro dela, todos os elementos dentro dessa div vao ter a estilização da classe container que vai ser criada no css-->   
+        <aside>                                                 <!--essa é uma tag semantica(tem significado especifico) usada para criar barras laterais-->
+            <img src="assets/foto.jpg" alt="Minha Foto">        <!--Adiciona uma imagem de perfil armazenada na pasta assets/-->
+            <h2>Nome</h2>                                       <!--tag H é a tag de título-->
+            <p>Estudante Sistemas da Informação ufsc</p>
+            <p>interesse em ciencia de dados</p>
+        </aside>
+
+        <main>                                                  <!--é dentro do main que eu agrupo minha sessões, cada uma com seu id que foi referenciado la no header-->
+            <section id = "sobre">                              <!--sessao sobre mim criada dentro do main-->
+                <h2>sobre mim</h2>
+                <p>paragrafo de breve descrição</p>
+            </section>
+
+            <section id = "interesses">                         <!--outra section criada dentro do main-->
+                <h2>Meus Interesses</h2>
+                <p>descrição dos interesses</p>
+            </section>
+        </main>  
+    </div>                                                       <!--aqui eu termino esse agrupamento-->
+    
+    <footer>                                                     <!--Footer é uma tag semantica(tem signifacado especifico) utilizada para fazer o rodape da pagina-->
+        <address>                                                <!--tag adres usada para indicar informações de contato-->
+            Contato: <a href="mailto:seuemail@email.com">seuemail@email.com</a>   <!-- tag "a" cria um hiperlink sobre o meu email--> <!--mailto faz com que ao clicar no link o email seja aberto-->
+        </address>
+    </footer>
+</body>
+</html>

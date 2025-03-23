@@ -1,50 +1,81 @@
-<!DOCTYPE html> <!--define o tipo de documento como html 5-->
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head> 
-    <meta charset="utf-8">       <!--como o texto vai ser codificado-->
-    <title>Meu Portifólio</title>         <!--Título que aparece na aba do navegador-->
-    <link rel="stylesheet" href="style.css">           <!--aqui ele chama meu arquivo css externo que vou criar-->
-    <link rel="icon" href="assets/favicon.ico" type="image/x-icon"> <!--aqui ele chama da minha pasta favicon o icone-->
+    <meta charset="utf-8">
+    <title>Meu Portifólio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-    <header>                                    <!--tag para cabeçalho da página(fica no topo da página)-->
-        <h1>Meu Portifólio</h1>                 <!--tag para definir o título do meu cabeçalho-->
-        <nav>                                   <!--tag usada para agrupar diferentes links de navegação-->
-            <ol>                                <!--cria a lista ordenada-->
-                <li> <a href="#sobre">Sobre Mim</a> </li>                       <!--tag "a" cria um hiper link em cima da palavra Sobre mim--> <!--esse link aponta para a section dentro do body que tem como atributo "id=sobre" -->
-                <li><a href="#interesses">Interesses</a></li>                   <!--esse #interesses nada mais é que um id criado que vou referenciar em uma section-->
-                <li><a href="#disciplinas">Disciplinas</a></li>
-                <li><a href="#projetos">Projetos</a></li>
+    <header>
+        <h1>Meu Portifólio</h1>
+        <nav>
+            <ol>
+                <li><a href="#sobre">Sobre Mim</a></li>
+                <li><a href="#interesses">Interesses</a></li>
+                <li><a href="#educacao">Educação</a></li>
+                <li><a href="#habilidades">Habilidades</a></li>
+                <li><a href="#contato">Contato</a></li>
                 <li><a href="html_dict.html">Dicionário HTML</a></li>
             </ol>
         </nav>
-    </header>                                                   <!--aqui eu fechei o cabeçalho com os hiperlinks da minha página-->
-         
-    <div class="container">                                     <!--div é uma tag generica usada apenas para agrupar os elementos dentro dela, todos os elementos dentro dessa div vao ter a estilização da classe container que vai ser criada no css-->   
-        <aside>                                                 <!--essa é uma tag semantica(tem significado especifico) usada para criar barras laterais-->
-            <img src="assets/foto.jpg" alt="Minha Foto">        <!--Adiciona uma imagem de perfil armazenada na pasta assets/-->
-            <h2>Nome</h2>                                       <!--tag H é a tag de título-->
-            <p>Estudante Sistemas da Informação ufsc</p>
-            <p>interesse em ciencia de dados</p>
+    </header>
+    
+    <div class="container">
+        <aside>
+            <img src="assets/foto.jpg" alt="Minha Foto">
+            <h2>Kalel Gomes de Freitas</h2>
+            <p>Estudante de Sistemas de Informação pela Universidade Federal de Santa Catarina</p>
         </aside>
 
-        <main>                                                  <!--é dentro do main que eu agrupo minha sessões, cada uma com seu id que foi referenciado la no header-->
-            <section id = "sobre">                              <!--sessao sobre mim criada dentro do main-->
-                <h2>sobre mim</h2>
-                <p>paragrafo de breve descrição</p>
+        <main>
+            <section id="sobre">
+                <h2>Sobre Mim</h2>
+                <p>Sou um estudante apaixonado por tecnologia, focado em desenvolvimento web e ciência de dados.</p>
             </section>
 
-            <section id = "interesses">                         <!--outra section criada dentro do main-->
+            <section id="interesses">
                 <h2>Meus Interesses</h2>
-                <p>descrição dos interesses</p>
+                <p>Desenvolvimento Fullstack, Machine Learning, UX/UI Design, Automação e mais.</p>
             </section>
-        </main>  
-    </div>                                                       <!--aqui eu termino esse agrupamento-->
-    
-    <footer>                                                     <!--Footer é uma tag semantica(tem signifacado especifico) utilizada para fazer o rodape da pagina-->
-        <address>                                                <!--tag adres usada para indicar informações de contato-->
-            Contato: <a href="mailto:seuemail@email.com">seuemail@email.com</a>   <!-- tag "a" cria um hiperlink sobre o meu email--> <!--mailto faz com que ao clicar no link o email seja aberto-->
+
+            <section id="educacao">
+                <h2>Formação Acadêmica</h2>
+                <ul>
+                    <li>UFSC - Sistemas de Informação (2022 - Atual)</li>
+                    <li>Curso Online: Data Science com Python - Alura</li>
+                </ul>
+            </section>
+
+            <section id="habilidades">
+                <h2>Habilidades Técnicas</h2>
+                <ul>
+                    <li>HTML, CSS, JavaScript</li>
+                    <li>Python, Pandas, NumPy</li>
+                    <li>Git, GitHub</li>
+                    <li>SQL e Banco de Dados</li>
+                </ul>
+            </section>
+
+            <section id="contato">
+                <h2>Contato</h2>
+                <form action="mailto:seuemail@email.com" method="post" enctype="text/plain">
+                    <label for="nome">Nome:</label><br>
+                    <input type="text" id="nome" name="nome"><br>
+                    <label for="mensagem">Mensagem:</label><br>
+                    <textarea id="mensagem" name="mensagem"></textarea><br>
+                    <input type="submit" value="Enviar">
+                </form>
+            </section>
+        </main>
+    </div>
+
+    <footer>
+        <address>
+            Contato: <a href="mailto:seuemail@email.com">seuemail@email.com</a>
         </address>
+        <p>&copy; 2025 Seu Nome</p>
     </footer>
 </body>
 </html>
