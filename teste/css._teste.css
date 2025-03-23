@@ -1,0 +1,164 @@
+/* Reset básico – remove margens e paddings padrões e melhora controle do layout */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Inclui padding e border no cálculo total da largura/altura */
+}
+
+/* Estilização geral do corpo da página */
+body {
+    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif; /* Define uma fonte legível e moderna */
+    background-color: #f0f8ff; /* Cor de fundo clara (azure suave) */
+    color: #333; /* Cor padrão do texto */
+    line-height: 1.6; /* Espaçamento vertical entre linhas */
+}
+
+/* Cabeçalho (header) da página */
+header {
+    background-color: #1f1f1f; /* Fundo escuro */
+    color: white;              /* Texto branco */
+    padding: 20px;             /* Espaçamento interno */
+    text-align: center;        /* Centraliza o conteúdo */
+}
+
+/* Lista de navegação no cabeçalho */
+nav ol {
+    list-style: none;   /* Remove os marcadores da lista */
+    padding: 0;         /* Remove padding interno */
+    margin-top: 10px;   /* Espaço acima da lista */
+}
+
+/* Cada item da navegação */
+nav ol li {
+    display: inline-block; /* Deixa os itens em linha */
+    margin: 0 12px;        /* Espaço lateral entre os links */
+}
+
+/* Links da navegação */
+nav a {
+    color: white;              /* Cor do texto do link */
+    text-decoration: none;     /* Remove sublinhado */
+    font-weight: bold;         /* Texto em negrito */
+    transition: color 0.3s ease; /* Suaviza a transição de cor no hover */
+}
+
+/* Efeito hover nos links */
+nav a:hover {
+    color: #00bcd4; /* Cor azul clara ao passar o mouse */
+}
+
+/* Container principal que agrupa aside e main */
+.container {
+    display: flex;           /* Ativa layout flexível */
+    flex-wrap: wrap;         /* Permite que os elementos quebrem linha se necessário */
+    gap: 20px;               /* Espaço entre os elementos */
+    margin: 20px auto;       /* Espaçamento e centralização horizontal */
+    max-width: 1200px;       /* Limita a largura máxima da área */
+}
+
+/* Barra lateral (aside) */
+aside {
+    align-self: flex-start;    /* Impede que a altura do aside se estique junto com o main */
+    flex: 1 1 150px;           /* Flex grow/shrink/basis – comportamento no flexbox */
+    max-width: 300px;          /* Largura máxima */
+    padding: 15px;             /* Espaço interno */
+    background-color: #e9e9e9; /* Fundo cinza claro */
+    border-radius: 10px;       /* Bordas arredondadas */
+    text-align: center;        /* Centraliza os elementos internos */
+}
+
+/* Imagem dentro do aside */
+aside img {
+    width: 60%;                /* Largura relativa */
+    max-width: 120px;          /* Largura máxima */
+    border-radius: 50%;        /* Formato circular */
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.1); /* Sombra leve */
+    margin-bottom: 10px;       /* Espaço abaixo da imagem */
+}
+
+/* Nome no aside */
+aside h2 {
+    font-size: 1.1em;       /* Tamanho da fonte */
+    margin-bottom: 5px;     /* Espaço inferior */
+}
+
+/* Descrição no aside */
+aside p {
+    font-size: 0.9em;       /* Fonte levemente menor */
+    margin: 0;              /* Sem margem extra */
+}
+
+/* Conteúdo principal (main) */
+main {
+    flex: 3;                              /* Ocupa mais espaço comparado ao aside */
+    background: white;                   /* Fundo branco */
+    padding: 25px;                       /* Espaço interno */
+    border-radius: 10px;                 /* Bordas arredondadas */
+    box-shadow: 0 0 10px rgba(0,0,0,0.05); /* Sombra leve para destacar o bloco */
+}
+
+/* Títulos nas seções do main */
+main h2 {
+    margin-bottom: 10px; /* Espaço inferior */
+    color: #004d61;      /* Cor azul escuro */
+}
+
+/* Espaçamento entre seções do main */
+main section {
+    margin-bottom: 30px; /* Distância entre blocos */
+}
+
+/* Campos de texto e área de mensagem do formulário */
+form input[type="text"],
+form textarea {
+    width: 100%;              /* Largura total */
+    padding: 10px;            /* Espaçamento interno */
+    margin-top: 6px;
+    margin-bottom: 12px;
+    border: 1px solid #ccc;   /* Borda cinza clara */
+    border-radius: 6px;       /* Bordas levemente arredondadas */
+    font-size: 1em;           /* Tamanho padrão */
+}
+
+/* Botão de envio do formulário */
+form input[type="submit"] {
+    background-color: #004d61; /* Fundo azul escuro */
+    color: white;              /* Texto branco */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s; /* Suaviza o hover */
+}
+
+/* Efeito ao passar o mouse no botão */
+form input[type="submit"]:hover {
+    background-color: #007b8a; /* Azul mais claro */
+}
+
+/* Rodapé (footer) */
+footer {
+    background: #1f1f1f;   /* Fundo escuro */
+    color: white;          /* Texto branco */
+    text-align: center;    /* Centralizado */
+    padding: 15px;
+    margin-top: 40px;      /* Espaço acima do rodapé */
+}
+
+/* Responsividade: para telas menores (ex: celular) */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Coloca aside e main um em cima do outro */
+        padding: 10px;
+    }
+
+    aside, main {
+        width: 100%; /* Ocupa 100% da largura em telas pequenas */
+    }
+
+    nav ol li {
+        display: block;     /* Coloca os links um embaixo do outro */
+        margin: 8px 0;
+    }
+}
